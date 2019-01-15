@@ -7,7 +7,7 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<form method="post">
+<form method="post" style="max-width:600px;" th:object="${cheeses}">
 
     <div th:each="cheese : ${cheeses}" class="checkbox">
         <input type="checkbox" name="cheeseIds" th:value="${cheese.id}" th:id="${cheese.id}"/>
